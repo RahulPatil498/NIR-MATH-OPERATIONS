@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Math Operations</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>NIR MATH OPERATIONS</h1>
+      <p>Apply a mathematical operation on all items in a list</p>
+    </header>
+
+    <main>
+      <label for="inputA">Enter comma-separated values (a):</label>
+      <textarea id="inputA" placeholder="e.g., 10.0, 20.0, 30.0"></textarea>
+
+      <label for="inputB">Enter a value (b):</label>
+      <input type="number" step="any" id="inputB" placeholder="e.g., 5" />
+
+      <label for="operation">Select Operation:</label>
+      <select id="operation">
+        <option value="add">Addition (+)</option>
+        <option value="subtract">Subtraction (-)</option>
+        <option value="multiply">Multiplication (×)</option>
+        <option value="divide">Division (÷)</option>
+      </select>
+
+      <button onclick="submitOperation()"><i class="fas fa-equals"></i> Calculate</button>
+      <div class="output" id="output"></div>
+      <button id="copyBtn" class="copy-button" onclick="copyOutput()" style="display: none;"><i class="fas fa-copy"></i> Copy Output</button>
+    </main>
+
+    <footer>
+      <div class="theme-toggle">
+        <label class="switch">
+          <input type="checkbox" id="themeSwitch" onchange="toggleTheme()">
+          <span class="slider round"></span>
+        </label>
+        <span id="themeText">Light Mode</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
